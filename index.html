@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head lang="it">
+    <meta charset="UTF-8" />
+    <meta http-equiv="refresh" content="" />
+    <title>Maestro JavaScript. Validazione Form</title>
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="stile.css" />
+    <script src="./libb.js"></script>
+  </head>
+
+  <body>
+    <div id="main-wrapper">
+      <h1>Registrazione</h1>
+
+      <form action="#" id="form-registrazione" method="post" novalidate>
+        <div id="wrapper-input">
+          <input
+            type="text"
+            name="name"
+            id="name"
+            value=""
+            placeholder="Nome"
+            required
+          />
+          <input
+            type="email"
+            name="email"
+            id="email"
+            value=""
+            placeholder="Email"
+            required
+          />
+          <div class="password-block">
+            <input
+              type="password"
+              name="password"
+              id="password"
+              value=""
+              placeholder="Password ( min. 8 caratteri)"
+              required
+            />
+            <span id="l_1"></span>
+            <span id="l_2"></span>
+            <span id="l_3"></span>
+          </div>
+          <input
+            type="password"
+            name="re_password"
+            id="re_password"
+            value=""
+            placeholder="Conferma Password"
+            required
+          />
+          <input
+            type="checkbox"
+            name="check"
+            id="check"
+            value="true"
+            required
+          />
+          <span class="fs-small"
+            >Ho letto e accettato il <a href="#">trattamento dei dati</a>
+          </span>
+          <input type="submit" class="button-enable" value="registrati" />
+        </div>
+      </form>
+      <div id="notifica-registrazione"></div>
+    </div>
+    <!--
+    <script type="module">
+      import formValidation from './lib_1.js';
+      document.addEventListener('DOMContentLoaded', function () {
+        formValidation('#form-registrazione', '#notifica-registrazione');
+      });
+    </script> -->
+  </body>
+</html>
