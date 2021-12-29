@@ -1,0 +1,227 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+:root {
+  --fs-root: 1.2rem;
+  --color-bg: #181d23;
+  --color-gray: #c7c7c7;
+  --color-main: #33a4fd;
+  --color-error: #e2513f;
+  --color-warning: #e49133;
+  --color-success: #2fa94f;
+  --padding-default-sm: 20px;
+  --padding-default-pc: 30px;
+  --margin-bottom: 30px;
+}
+
+html {
+  font-size: var(--fs-root);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: 'roboto', sans-serif;
+  background-color: blue;
+  background: linear-gradient(
+    90deg,
+    rgb(14, 54, 141) 0%,
+    rgb(44, 113, 204) 35%,
+    rgb(72, 156, 252)
+  );
+}
+
+#main-wrapper {
+  background-color: white;
+  width: 100%;
+  border-radius: 40px;
+  padding: var(--padding-default-sm);
+  margin: 20px;
+}
+
+@media screen and (min-width: 768px) {
+  #main-wrapper {
+    width: 60%;
+    padding: var(--padding-default-pc);
+    margin-top: 30px;
+  }
+}
+
+@media screen and (min-width: 1170px) {
+  #main-wrapper {
+    width: 50%;
+    margin-top: 55px;
+  }
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 1.4rem;
+  text-align: center;
+  font-family: 'lato', sans-serif;
+  margin-bottom: var(--margin-bottom);
+}
+
+.error {
+  color: var(--color-error);
+}
+
+.success {
+  color: var(--color-success);
+}
+
+.notification-error {
+  color: var(--color-error);
+  font-weight: bold;
+}
+
+.notification-success {
+  color: var(--color-success);
+  font-weight: bold;
+}
+
+#wrapper-input {
+  color: #444;
+  font-size: 0.9rem;
+}
+
+#form-registrazione a {
+  text-decoration: none;
+  color: var(--color-main);
+}
+
+#form-registrazione input {
+  margin-bottom: var(--margin-bottom);
+}
+
+#form-registrazione input::placeholder {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #444;
+}
+
+#form-registrazione input[type='text'],
+#form-registrazione input[type='email'],
+#form-registrazione input[type='password'] {
+  display: block;
+  border: none;
+  font-size: 1em;
+  background-color: white;
+  appearance: none;
+  border-bottom: 1px solid lightgrey;
+  width: 100%;
+  height: auto;
+  margin-bottom: 1rem;
+  padding: 0.6rem;
+  color: var(--color-main);
+}
+
+#form-registrazione input[type='submit'] {
+  background-color: var(--color-main);
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  display: block;
+  font-family: 'lato', sans-serif;
+  border: none;
+  font-size: 0.5rem;
+  padding: 15px;
+  opacity: 0.5;
+  cursor: pointer;
+}
+
+.button-enable {
+  opacity: 1;
+  transition: 0.5s ease-in;
+}
+
+/*
+#form-registrazione input[type='submit']:hover {
+  background-color: white;
+  color: var(--color-main);
+  cursor: pointer;
+  border: 1px solid var(--color-main);
+  transition: 0.5s ease-in-out;
+} */
+
+#form-registrazione input:focus-within,
+#form-registrazione input:focus,
+#form-registrazione input:active {
+  border-color: transparent;
+  outline: none;
+  border-bottom: 2px solid var(--color-main);
+  transition: 0.3s linear;
+}
+
+#form-registrazione input.error {
+  color: var(--color-error);
+}
+
+.fs-small {
+  font-size: 0.75rem;
+}
+
+.password-block {
+  position: relative;
+}
+
+.password-block > span {
+  position: absolute;
+  background-color: lightgrey;
+  height: 5px;
+  width: 65px;
+  border-radius: 15px;
+  bottom: 4px;
+  transition: 0.4s all ease-in;
+}
+
+.password-block > span#l_1 {
+  right: 140px;
+}
+
+.password-block > span#l_1.active {
+  background-color: var(--color-error);
+}
+
+.password-block > span#l_2 {
+  right: 70px;
+}
+
+.password-block > span#l_2.active {
+  background-color: var(--color-warning);
+}
+
+.password-block > span#l_3 {
+  right: 0px;
+}
+
+.password-block > span#l_3.active {
+  background-color: var(--color-success);
+}
+
+/*
+#form-registrazione input.error,
+#form-registrazione textarea.error,
+#form-registrazione select.error {
+  border-color: var(--color-error);
+  border-width: 2px;
+}
+#form-registrazione input[type='button'],
+#form-registrazione input[type='submit'],
+#form-registrazione button {
+  display: inline-block;
+  width: auto;
+}
+#form-registrazione input[type='submit'],
+#form-registrazione button {
+  color: #ffffff;
+  background-color: var(--color-main);
+  border-color: var(--color-main);
+}*/
